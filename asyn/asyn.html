@@ -1,0 +1,31 @@
+<!-- <script type="text/javascript">
+  const fun2 = () => {
+      console.log("function 2");
+  };
+
+  const fun1 = () => {
+    console.log("come 1");
+    fun2();
+    console.log("come 2");
+  };
+
+  fun1();
+</script> -->
+
+
+<script type="text/javascript">
+    const fun2 = () => {
+      setTimeout(() => {
+        console.log("function 2");
+      }, 3000);
+    };
+  
+    const fun1 = () => {
+      console.log("come 1");
+      fun2();
+      console.log("come 2");
+    };
+  
+    fun1();
+  </script>
+  
