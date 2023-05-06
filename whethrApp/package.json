@@ -1,0 +1,14 @@
+{
+  "name": "whethrapp",
+  "version": "1.0.0",
+  "description": "creating a weather node.ja app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "miraj",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
