@@ -26,22 +26,36 @@ const app = express();
 const Port = 8000;
 
 const staticPath = path.join(__dirname, "../public");
+const templed = path.join(__dirname,"../templed")
 
 // app.use(express.static(staticPath))
 
 app.set("views engine", "hbs");
 
+app.set('views',templed)
+
 // app.get("/", (req, res) => {
 //   res.render("index");
 // });
 
+
+
 app.get("/", (req, res) => {
   res.send("hello  friend");
 });
+
+
+app.get("/about", (req, res) => {
+  res.send("hello about  friend");
+});
+
+
+app.get("*",(req,res)=>{
+  res.send("404")
+})
 
 app.listen(Port, () => {
   console.log("listening to the post");
 });
 
 
-// start32
