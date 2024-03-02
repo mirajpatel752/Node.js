@@ -1,0 +1,132 @@
+/*----------------------------------------*/
+/*  08. TITLE CSS START
+/*----------------------------------------*/
+
+
+// Section Title
+.sec {
+  &-title {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1;
+    color: var(--black-2);
+
+    @media #{$xl} {
+      font-size: 50px;
+    }
+
+    @media #{$lg} {
+      font-size: 45px;
+    }
+
+    @media #{$md} {
+      font-size: 36px;
+    }
+
+    @media #{$sm} {
+      font-size: 32px;
+    }
+
+    &-2 {
+      font-weight: 500;
+      font-size: 120px;
+      line-height: 0.9;
+      color: var(--black-2);
+
+      @media #{$xxl} {
+        font-size: 100px;
+      }
+
+      @media #{$xl} {
+        font-size: 90px;
+      }
+
+      @media #{$lg} {
+        font-size: 72px;
+      }
+
+      @media #{$md} {
+        font-size: 60px;
+      }
+
+      @media #{$sm} {
+        font-size: 45px;
+      }
+    }
+
+    &-3 {
+      font-weight: 500;
+      font-size: 130px;
+      line-height: 1;
+      color: var(--black-2);
+
+      @media #{$xxl} {
+        font-size: 100px;
+      }
+
+      @media #{$xl} {
+        font-size: 100px;
+      }
+
+      @media #{$lg} {
+        font-size: 80px;
+      }
+
+      @media #{$md} {
+        font-size: 60px;
+      }
+
+      @media #{$sm} {
+        font-size: 48px;
+      }
+    }
+  }
+
+  &-sub-title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--black-3);
+    padding-bottom: 15px;
+    text-transform: capitalize;
+  }
+}
+
+
+// Hero Title
+.hero {
+  &-title {
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 1;
+    color: var(--black);
+
+    @media #{$xl} {
+      font-size: 60px;
+    }
+
+    @media #{$lg} {
+      font-size: 60px;
+    }
+
+    @media #{$md} {
+      font-size: 48px;
+    }
+
+    @media #{$sm} {
+      font-size: 36px;
+    }
+  }
+
+}
+
+
+.title-line {
+  overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  .img-anim {
+    @include img_anim( 100%, 565px, 120% );
+  }
+}
