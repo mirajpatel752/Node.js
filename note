@@ -1,0 +1,16 @@
+ssh key  crete  
+
+
+1 .     ls ~/.ssh         check
+2 .     ssh-keygen -t rsa -b 4096 -C "mirajpatel752@gmail.com"    new crete 
+3 .      ls -a -l ~/.ssh   
+4 .      eval $(ssh-agent -s)
+5 .      ssh-add ~/.ssh/id_rsa
+
+add github  ssh  title  and key 
+
+6 .      cat ~/.ssh/id_rsa.pub                  show  key 
+
+
+vs code check 
+7 . ssh -T git@github.com
