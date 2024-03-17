@@ -1,6 +1,7 @@
 const connectDB = require("./mongoose");
 const express = require("express");
 const mongoose = require("mongoose");
+// var validator = require('validator')
 const app = express();
 connectDB();
 
@@ -8,10 +9,38 @@ const playlistSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
+    unique: true,
+    lowercase: true,
+    trim: true,
+    minlength: 2,
+    maxlength: 30,
   },
   ctype: String,
-  videos: Number,
+  video: {
+    type: Number,
+    // validate(value){
+    //   if(value < 0){
+    //     throw new  Error( "video count should not be negative")
+    //   }
+    // }
+    // validate: {
+    //   validator: function (value) {
+    //     return value.length < 0;
+    //   },
+    //   message: "video count should not be negative",
+    // },
+  },
   author: String,
+  // email: {
+  //   type: String,
+  //   required:true,
+  //   unique:true,
+    // validate(value){
+    //   if(validator.isEmail(value)){
+    //     throw new Error("email  is  not  validate") 
+    //   }
+    // }
+  // },
   active: Boolean,
   date: {
     type: Date,
@@ -23,43 +52,46 @@ const Playlist = mongoose.model("Playlist", playlistSchema);
 
 const createDocument = async () => {
   try {
-    const reactPlayList = new Playlist({
-      name: "React",
-      video: 23,
-      author: "a",
-      active: true,
-    });
-    const javaPlayList = new Playlist({
-      name: "java",
-      video: 23,
-      author: "b",
-      active: false,
-    });
-    const nodePlayList = new Playlist({
-      name: "node",
-      video: 23,
-      author: "c",
-      active: true,
-    });
+    // const reactPlayList = new Playlist({
+    //   name: "React",
+    //   video: 23,
+    //   author: "a",
+    //   active: true,
+    // });
+    // const javaPlayList = new Playlist({
+    //   name: "java",
+    //   video: 23,
+    //   author: "b",
+    //   active: false,
+    // });
+    // const nodePlayList = new Playlist({
+    //   name: "node",
+    //   video: 23,
+    //   author: "c",
+    //   active: true,
+    // });
     const mongoPlayList = new Playlist({
-      name: "mongo",
-      video: 20,
+      name: "JA",
+      video: 2,
       author: "d",
+      // email: "mi752@gmail.com",
       active: true,
     });
     // const result =  await reactPlayList.save();
-    const result = await Playlist.insertMany([
-      reactPlayList,
-      javaPlayList,
-      nodePlayList,
-      mongoPlayList,
-    ]);
+    // const rcesult = await Playlist.insertMany([
+    //   reactPlayList,
+    //   javaPlayList,
+    //   nodePlayList,
+    //   mongoPlayList,
+    // ]);
+    const result = await Playlist.insertMany([mongoPlayList]);
+
     console.log(result, "@");
   } catch (error) {
     console.log(error, "ERR");
   }
 };
-// createDocument()
+createDocument();
 
 const getDocument = async () => {
   // const result = await Playlist.find()
@@ -103,11 +135,9 @@ const updateDocument = async (_id) => {
 
 const deleteDocument = async (_id) => {
   try {
-      const Result = await Playlist.deleteOne({_id})
-    
+    const Result = await Playlist.deleteOne({ _id });
   } catch (error) {
-    console.log(error,"error")
-    
+    console.log(error, "error");
   }
 };
 
