@@ -1,0 +1,59 @@
+/*----------------------------------------*/
+/*  15. SLIDER CSS START
+/*----------------------------------------*/
+
+
+
+
+// Roll Slider
+.roll {
+
+  &__area {
+    background-color: var(--primary);
+    padding: 31px 10px;
+
+    &-2 {
+      padding: 31px 10px;
+      background-color: var(--black-2);
+
+      .roll__slide h2 {
+        color: var(--white);
+      }
+    }
+
+    &-3 {
+      padding: 31px 10px;
+      background-color: var(--pink-2);
+
+      .roll__slide h2 {
+        color: var(--black-2);
+      }
+    }
+  }
+
+  &__wrapper {
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+  }
+
+  &__slide {
+    text-align: center;
+    
+    h2 {
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 1.1;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+  }
+}
+
+
+// Pagination
+
+.pagination {
+  &-btn {
+    
+  }
+}

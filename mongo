@@ -1,0 +1,68 @@
+ 1. database crete
+  use bhanderidatabase
+
+2. docment  add
+ db.mirajdata.insertOne({name:"Reactjs",type:"Feont End",videos:80,active:true})
+
+ 3. show  active  data base 
+ db
+
+ 4. 
+ show collections 
+
+ 5. collections .in data
+ db.mirajdata.find()
+
+
+ 6. database  find 
+ db.mirajdata.find({name:"Reactjs"})
+
+
+ db.mirajdata.find({name:"Reactjs"},{name:1})   1 hoy  to  aek  fild  aave true
+ db.mirajdata.find({name:"Reactjs"},{name:0})    tena  shivay ni badhi 
+ db.mirajdata.find({name:"Reactjs"},{_id:0,name:1})  withaut id 
+
+ 7. db.mirajdata.findOne({active:true})    frist  value find 
+ 8 . db.mirajdata.find({active:true}).limit(1).skip(1)   find peli  ne  skip  kari ne  biji ne lay aave
+
+update  mate 
+
+9. db.mirajdata.updateOne({name:"javascript"},{$set:{type:"full stack"}})
+
+
+10  multiple   db.mirajdata.updateMany({active:true},{$set:{active:false}})
+
+
+11 delete     db.mirajdata.deleteMany({type:"full stack"})
+all  delete db.mirajdata.deleteMany({})
+
+
+
+$eq:  =
+$gt: >
+$gte: >=
+$lt:<
+$lte: <= 
+
+$ne:   db.collection.find({
+    "color": { "$nin": ["red", "blue", "green"] }
+})  aa na chivay na color find
+
+
+
+$in: એરેમાં ઉલ્લેખિત કોઈપણ મૂલ્યો સાથે મેળ ખાય છે.
+
+$nin: no  aavta  hoy  te 
+{ field: { $nin: [ <value1>, <value2> ... <valueN> ] } }
+
+
+$exists:  
+$regex:
+
+
+
+# logical query 
+$and: 
+$or:  
+$not: 
+$nor
